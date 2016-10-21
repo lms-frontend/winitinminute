@@ -1,5 +1,5 @@
 var slider;
-var headerHeight;
+var headerHeight = ($('nav.main-navigation').height())+100;
 $(window).resize(function(){
   setTimeout(function(){
     destroyslider();
