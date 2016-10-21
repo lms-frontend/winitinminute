@@ -245,9 +245,22 @@ $.ajax({
         success: function(data) {
           result = data.result;
           var famedata = result.fameData;
+
           console.log(data);
           $.each(famedata, function(i, hofdata){
-            $slider.append('<div class="slide hof-slide text-center"><div class="slide-content"><figure><img src="data:image/png;base64,'+hofdata.user_image+'"></figure><span class="priceImg"><img src="'+hofdata.prize_image +'" ></span><h4 class="name">'+hofdata.user_name+'<br><span class="location">'+ hofdata.country +'</span></h4></div>');
+            var userImage = hofdata.user_image;
+            var priceImg = hofdata.prize_image;
+            var userName = hofdata.user_name;
+            var countryName = hofdata.country;
+            var date = function(){
+                var dateString = hofdata.date;
+                var dateArr = dateString.split('T');
+                return dateArr[0];
+            };
+            var resDate = date();
+            var userImageMarkup = (userImage.indexOf("http") == 0) ? '<img src="'+ userImage +'">':'<img src="data:image/png;base64,'+ userImage +'">';
+
+            $slider.append('<div class="slide hof-slide text-center"><div class="slide-content"><figure>'+ userImageMarkup +'</figure><span class="priceImg"><img src="'+ priceImg +'" ></span><h4 class="name">'+ userName +'<br><span class="location">'+ countryName +'</span><br><span class="date">'+ resDate +'</span></h4></div>');
           });
 
           setTimeout(function(){

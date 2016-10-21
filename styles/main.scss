@@ -310,7 +310,7 @@ section.hall-of-fame{
       }
       span.priceImg {
           position: absolute;
-          top: 54%;
+          top: 52%;
           max-width: 65px;
           left: 50%;
           width: 60px;
@@ -336,11 +336,14 @@ section.hall-of-fame{
         font-size: 1em;
         font-weight: 600;
         line-height: 1.4;
-        margin-top: 40px;
+        margin-top: 45px;
         color: $dark-heading-color;
         padding-bottom: 15px;
         span{
           font-size: .8em;
+        }
+        span.date{
+          color: rgba(223, 74, 61, 0.76);
         }
       }
     }

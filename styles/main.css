@@ -4403,15 +4403,17 @@ section.hall-of-fame .hof-slide figure { display: inline-block; position: relati
 
 section.hall-of-fame .hof-slide figure img { width: 100%; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
 
-section.hall-of-fame .hof-slide span.priceImg { position: absolute; top: 54%; max-width: 65px; left: 50%; width: 60px; height: 60px; background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 0 0 2px rgba(223, 74, 61, 0.9); -webkit-transform: rotate(-15deg); -ms-transform: rotate(-15deg); transform: rotate(-15deg); }
+section.hall-of-fame .hof-slide span.priceImg { position: absolute; top: 52%; max-width: 65px; left: 50%; width: 60px; height: 60px; background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 0 0 2px rgba(223, 74, 61, 0.9); -webkit-transform: rotate(-15deg); -ms-transform: rotate(-15deg); transform: rotate(-15deg); }
 
 @media screen and (max-width: 600px) { section.hall-of-fame .hof-slide span.priceImg { width: 50px; height: 50px; } }
 
 section.hall-of-fame .hof-slide span.priceImg img { position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
 
-section.hall-of-fame .hof-slide h4.name { text-transform: uppercase; font-size: 1em; font-weight: 600; line-height: 1.4; margin-top: 40px; color: #3e3e3e; padding-bottom: 15px; }
+section.hall-of-fame .hof-slide h4.name { text-transform: uppercase; font-size: 1em; font-weight: 600; line-height: 1.4; margin-top: 45px; color: #3e3e3e; padding-bottom: 15px; }
 
 section.hall-of-fame .hof-slide h4.name span { font-size: .8em; }
+
+section.hall-of-fame .hof-slide h4.name span.date { color: rgba(223, 74, 61, 0.76); }
 
 section.feedback { padding: 30px 0; }
 
