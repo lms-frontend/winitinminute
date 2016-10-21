@@ -1,0 +1,492 @@
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "font-awesome.min.css";
+
+$icon-font-path: '../fonts/';
+@import 'vars';
+@import 'plugin';
+//basic global fixes
+
+.btn{
+  outline: 0!important;
+  &:focus, &:hover, &:active{
+    color: inherit;
+    border: none;
+  }
+}
+a{
+  cursor: pointer;
+}
+//basic global fixes
+body{
+  font-family: $opensans;
+}
+
+//components
+button.download-btn{
+  background: $orange;
+  width: 220px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1em;
+  position: relative;
+  height: 55px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  text-align: left;
+  padding-left: 25px;
+  span{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    line-height: 55px;
+    color: darken($navlink-color, 35%);
+    font-size: 1.5em;
+    width: 55px;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+  }
+}
+h1.panelTitle{
+  text-transform: uppercase;
+}
+//components
+
+
+// header
+header.main-header{
+  background: $header-bg url(../images/bg-artboard.jpg) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 15px;
+  padding-bottom: 0;
+  .logo > img{
+    max-width: 100px;
+  }
+  nav.main-navigation{
+    // transition: all .5s;
+    min-height: 120px;
+    & ul.main-nav {
+      margin: 35px 0;
+      li > a{
+        color: $navlink-color;
+        background: none!important;
+        text-transform: uppercase;
+        font-family: $opensans;
+        font-weight: 600;
+
+        &:hover{
+          color: $orange;
+        }
+      }
+      & > li > a.active{
+        color: $orange;
+      }
+    }
+  }
+}
+
+//stickyHeader
+.stickyHeader nav.main-navigation{
+  animation-duration: .5s;
+  min-height: auto!important;
+  background: rgba($header-bg, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999999;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .3);
+  .logo > img{
+    max-height: 75px;
+  }
+  ul.main-nav {
+    margin: 25px 0!important;
+  }
+}
+
+section.banner{
+  margin-top: 35px;
+  .banner-content{
+    background: url(../images/banner-wininminute.png);
+    background-size: 42%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    .b-heading{
+      line-height: 1.2;
+      font-size: 2.5em;
+    }
+    .b-subheading{
+      color: $orange;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      letter-spacing: .2px;
+      margin-top: 25px;
+    }
+    & p{
+      margin-top: 25px;
+      max-width: 255px;
+    }
+    button.download-btn{
+      margin: 30px 0;
+    }
+  }
+}
+// header
+
+// main-content
+// mobo-platform section starts
+section.mobo-platform{
+  .container{
+    max-width: 600px;
+    padding: 25px 0;
+  }
+  i.fa{
+    color: $light-gray;
+    font-size: 3em;
+  }
+}
+// mobo-platform section ends
+
+// welcome section starts
+  section.welcome{
+    padding: 40px 0;
+    h1.welcomeHeading{
+      color: $orange;
+      font-size: 3em;
+      text-transform: uppercase;
+      line-height: 1.2;
+      span{
+        color: $dark-heading-color;
+        font-size: .85em;
+      }
+    }
+    .welcomeContent{
+      h3{
+        font-size: 1.2em;
+        text-transform: uppercase;
+        color: $orange;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+      p{
+        color: lighten($dark-heading-color, 30%);
+        font-size: .95em;
+      }
+    }
+  }
+// welcome section ends
+
+// hall of fame starts
+section.hall-of-fame{
+  position: relative;
+  .bx-wrapper{
+    // min-height: 380px;
+    .bx-viewport{
+      height: 300px;
+    }
+  }
+    .loader{
+      content: '';
+      display: block;
+      background: rgba(255,255,255,.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 99999;
+      .loader-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 999999;
+        transform: translate(-50%,-50%);
+    }
+  }
+  .slide-content{
+    margin: 0 auto;
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      background: white;
+      //width: 100%;
+      width: 180px;
+      height: calc(100% - 80px);
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 80px;
+      border-radius: 10px;
+    }
+  }
+  .bx-wrapper{
+    width: 100%!important;
+    max-width: 1200px!important;
+    // .bx-next{
+    //   background: red;
+    //   height: 150px;
+    // }
+    .bx-controls-direction a{
+      top: 45%;
+    }
+    .bx-prev{
+      left: 20px;
+      background:none;
+      &:after{
+      content: "";
+      display: block;
+      width: 3px;
+      height: 49px;
+      position: absolute;
+      background: #dadada;
+      transform: rotate(-25deg);
+      }
+      &:before{
+        content: "";
+        display: block;
+        width: 3px;
+        height: 49px;
+        position: absolute;
+        top: -23px;
+        background: #dadada;
+        transform: rotate(25deg);
+      }
+    }
+    .bx-next{
+      right: -5px;
+      background:none;
+      &:after{
+      content: "";
+      display: block;
+      width: 3px;
+      height: 49px;
+      position: absolute;
+      background: #dadada;
+      transform: rotate(25deg);
+      }
+      &:before{
+        content: "";
+        display: block;
+        width: 3px;
+        height: 49px;
+        position: absolute;
+        top: -23px;
+        background: #dadada;
+        transform: rotate(-25deg);
+      }
+    }
+  }
+  background: $hof-bg;
+  padding: 20px 10px;
+  color: $dark-heading-color;
+    & h1.panelTitle{
+      margin-bottom: 40px;
+    }
+    .hof-slide{
+      figure{
+        display: inline-block;
+        position: relative;
+        border: 15px solid $orange;
+        border-radius: 50%;
+        background: #fff;
+        width: 180px;
+        height: 180px;
+        overflow: hidden;
+        @media screen and (max-width: 600px){
+          width: 150px;
+          height: 150px;
+        }
+        img{
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      span.priceImg {
+          position: absolute;
+          top: 54%;
+          max-width: 65px;
+          left: 50%;
+          width: 60px;
+          height: 60px;
+          background: #fff;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 0 0 2px rgba($orange,.9);
+          transform: rotate(-15deg);
+          @media screen and (max-width: 600px){
+            width: 50px;
+            height: 50px;
+          }
+          img{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+      }
+
+      h4.name{
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-top: 40px;
+        color: $dark-heading-color;
+        padding-bottom: 15px;
+        span{
+          font-size: .8em;
+        }
+      }
+    }
+}
+// hall of fame ends
+
+// feedback section starts
+section.feedback{
+    padding: 30px 0;
+  .feedbackCard-wrap{
+
+  }
+  .feedbackCard{
+    margin: 15px 0;
+    figure.fc-img{
+      & > img{
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+    .fc-name{
+      margin: 0 0 15px;
+      color: $orange;
+      font-size: 1.25em;
+      span{
+        color: $dark-heading-color;
+        font-size: .75em;
+      }
+    }
+    .fc-description{
+      color: lighten($dark-heading-color, 30%);
+      font-size: .9em;
+      line-height: 1.5;
+    }
+  }
+}
+// feedback section ends
+
+// mainfooter starts
+footer.main-footer{
+  background: $header-bg url(../images/bg-artboard.jpg) no-repeat center center;
+  padding: 40px 0;
+  color: #fff;
+  .newsletter{
+    text-align: center;
+    span{
+      color: $orange;
+      font-size: 3em;
+    }
+    p{
+      max-width: 400px;
+      margin: 15px auto;
+    }
+    .newsletter-form{
+      margin: 30px auto;
+      & [class*='col-']{
+        padding:0 5px 0 5px;
+      }
+      input, button, textarea{
+        height: 50px;
+        width: 100%;
+        border:none;
+        border-radius: 5px;
+        margin: 10px 0;
+        &:focus,&:hover,&:active{
+          outline:0;
+          box-shadow: none;
+        }
+      }
+      input[type=email], input[type="text"], textarea{
+        transition: all .5s ease-out ;
+        border: solid 2px #fff;
+        &:focus{
+          background: transparent;
+          border: solid 2px #fff;
+          color: #fff;
+        }
+      }
+      textarea{
+        min-height: 120px;
+        color: $orange;
+        padding: 15px 20px;
+        margin-top: 0;
+      }
+      input{
+        padding-left: 20px;
+        color: $orange;
+      }
+      button{
+        background: $orange;
+        color: #fff;
+        text-transform: uppercase;
+        max-width: 200px;
+        margin: 0;
+      }
+    }
+  }
+  .social-media{
+    text-align: center;
+    .smi{
+      background: rgba(#fff,.1);
+      display: inline-block;
+      width: 50px;
+      line-height: 50px;
+      font-size: 1.5em;
+      border-radius: 50%;
+      color: #fff;
+      margin:60px 5px 0px 5px;
+    }
+  }
+}
+// mainfooter ends
+
+//loader
+/* Animation */
+@-webkit-keyframes loading {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes loading {
+	to { -moz-transform: rotate(360deg); }
+}
+@-ms-keyframes loading {
+	to { -ms-transform: rotate(360deg); }
+}
+@keyframes loading {
+	to { transform: rotate(360deg); }
+}
+
+/* Loader (*/
+#loading {
+
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background: transparent;
+
+	border-top: 4px solid #fff;
+	border-right: 4px solid #fff;
+	border-bottom: 4px solid #777;
+	border-left: 4px solid #777;
+
+	-webkit-animation: loading 1.2s infinite linear;
+	-moz-animation: loading 1.2s infinite linear;
+	-ms-animation: loading 1.2s infinite linear;
+	animation: loading 1.2s infinite linear;
+
+}
+
+@import "responsive";

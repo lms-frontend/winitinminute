@@ -1,0 +1,57 @@
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+
+    header.main-header{
+      .logo > img{
+        max-width: 75px;
+      }
+      .navbar-toggle{
+        top: 20px;
+      }
+    }
+
+   section.banner .banner-content{
+     background: none;
+     p{
+       margin: 25px auto 0;
+     }
+   }
+    nav.main-navigation{
+      margin-bottom: 0;
+      background: lighten($header-bg, 3%);
+      box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.22);
+      .navbar-toggle{
+        span{
+          background: #fff;
+        }
+      }
+      .navbar-collapse{
+        box-shadow: none;
+        ul.main-nav{
+          text-align: center;
+          margin: 15px 0 0px!important;
+        }
+      }
+    }
+
+    section.banner{
+      text-align: center;
+      margin-top: 0;
+      .banner-img{
+        display: none;
+      }
+    }
+
+    .stickyHeader nav.main-navigation{
+      min-height: 104px!important;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+}
