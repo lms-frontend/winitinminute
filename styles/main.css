@@ -4323,7 +4323,7 @@ h1.panelTitle { text-transform: uppercase; }
 
 header.main-header { background: #2d2e42 url(../images/bg-artboard.jpg) no-repeat center center; background-size: cover; color: #fff; padding: 15px; padding-bottom: 0; }
 
-header.main-header .logo > img { max-width: 100px; }
+header.main-header .logo > img { max-width: 120px; }
 
 header.main-header nav.main-navigation { min-height: 120px; }
 
@@ -4343,9 +4343,9 @@ header.main-header nav.main-navigation ul.main-nav > li > a.active { color: #df4
 
 section.banner { margin-top: 35px; }
 
-section.banner .banner-content { background: url(../images/banner-wininminute.png); background-size: 42%; background-repeat: no-repeat; background-position: right bottom; }
+section.banner .banner-content { background: url(../images/banner-wininminute.png); background-size: 42%; background-repeat: no-repeat; background-position: right bottom; min-height: 350px; }
 
-section.banner .banner-content .b-heading { line-height: 1.2; font-size: 2.5em; }
+section.banner .banner-content .b-heading { line-height: 1.2; font-size: 2em; margin-top: 120px; }
 
 section.banner .banner-content .b-subheading { color: #df4a3d; font-size: 1.2em; text-transform: uppercase; letter-spacing: .2px; margin-top: 25px; }
 
@@ -4355,7 +4355,15 @@ section.banner .banner-content button.download-btn { margin: 30px 0; }
 
 section.mobo-platform .container { max-width: 600px; padding: 25px 0; }
 
-section.mobo-platform i.fa { color: #b8b8b8; font-size: 3em; }
+section.mobo-platform a { text-decoration: none !important; }
+
+section.mobo-platform a i.fa { color: #2d2e42; font-size: 3em; }
+
+section.mobo-platform a span { font-weight: 600; color: #2d2e42; font-size: 12px; display: block; margin-top: 10px; }
+
+section.mobo-platform a:hover i.fa { color: #df4a3d; }
+
+section.mobo-platform a:hover span { color: #df4a3d; }
 
 section.welcome { padding: 40px 0; }
 
@@ -4403,19 +4411,27 @@ section.hall-of-fame .hof-slide figure { display: inline-block; position: relati
 
 section.hall-of-fame .hof-slide figure img { width: 100%; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
 
-section.hall-of-fame .hof-slide span.priceImg { position: absolute; top: 50%; max-width: 65px; left: 50%; width: 60px; height: 60px; background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 0 0 2px rgba(223, 74, 61, 0.9); -webkit-transform: rotate(-15deg); -ms-transform: rotate(-15deg); transform: rotate(-15deg); }
+section.hall-of-fame .hof-slide span.priceImg { position: absolute; top: 54%; max-width: 65px; left: 50%; width: 60px; height: 60px; background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 0 0 2px rgba(223, 74, 61, 0.9); -webkit-transform: rotate(-15deg); -ms-transform: rotate(-15deg); transform: rotate(-15deg); }
 
 @media screen and (max-width: 600px) { section.hall-of-fame .hof-slide span.priceImg { width: 50px; height: 50px; } }
 
 section.hall-of-fame .hof-slide span.priceImg img { position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
 
-section.hall-of-fame .hof-slide h4.name { text-transform: uppercase; font-size: 1em; font-weight: 600; line-height: 1.4; margin-top: 45px; color: #3e3e3e; padding-bottom: 15px; }
+section.hall-of-fame .hof-slide h4.name { text-transform: uppercase; font-size: 1em; font-weight: 600; line-height: 1.4; margin-top: 40px; color: #3e3e3e; padding-bottom: 15px; }
 
 section.hall-of-fame .hof-slide h4.name span { font-size: .8em; }
 
 section.hall-of-fame .hof-slide h4.name span.date { color: rgba(223, 74, 61, 0.76); }
 
-section.feedback { padding: 30px 0; }
+section.feedback { text-align: center; padding: 30px 0; }
+
+section.feedback ul.feedback-wrap { min-height: 120px; list-style-type: none; position: relative; padding: 0; margin-top: 40px; max-width: 650px; margin: 30px auto; padding: 30px 20px; }
+
+section.feedback ul.feedback-wrap:before { content: "\f10d"; position: absolute; left: 0; display: inline-block; font: normal normal normal 3em/1 FontAwesome; color: rgba(223, 74, 61, 0.1); top: -20px; }
+
+section.feedback ul.feedback-wrap:after { content: "\f10e"; position: absolute; right: 0; display: inline-block; font: normal normal normal 3em/1 FontAwesome; color: rgba(223, 74, 61, 0.1); }
+
+section.feedback ul.feedback-wrap .feedback-block { font-size: 18px; font-weight: 600; color: #df4a3d; }
 
 section.feedback .feedbackCard { margin: 15px 0; }
 

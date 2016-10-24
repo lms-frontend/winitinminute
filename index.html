@@ -42,13 +42,13 @@
     <section class="banner container">
       <div class="banner-content row">
         <div class="col-md-5 col-sm-5">
-          <h1 class="b-heading">The best <br>Quiz <br>Application </h1>
-          <h2 class="b-subheading">For Your smartphone</h2>
-          <p>Em ipsum dolor sit amet, consectetur adipisicing elit, ed do eiusmod tempor.</p>
-          <button type="button" class="btn download-btn" style="visibility:hidden">
+          <h1 class="b-heading">Enjoy the Game</h1>
+          <h2 class="b-subheading"><em>Learn the facts  </em>&nbsp;<strong> Win some Prizes</strong></h2>
+          <!-- <p>Em ipsum dolor sit amet, consectetur adipisicing elit, ed do eiusmod tempor.</p> -->
+          <!-- <button type="button" class="btn download-btn" style="visibility:hidden">
             Free Download
             <span class="glyphicon glyphicon-cloud-download"></span>
-          </button>
+          </button> -->
         </div>
         <div class="col-md-7">
           &nbsp;
@@ -65,13 +65,20 @@
     <section class="mobo-platform">
       <div class="container text-center">
           <div class="col-xs-4">
-            <a href="https://www.microsoft.com/en-us/store/games/win-it-in-minute/9nblggh2l65t" target="_blank"><i class="fa fa-windows" aria-hidden="true"></i></a>
+            <a href="https://www.microsoft.com/en-us/store/games/win-it-in-minute/9nblggh2l65t" target="_blank">
+              <i class="fa fa-windows" aria-hidden="true"></i>
+              <span>Download from<br> Windows Store</span>
+            </a>
           </div>
           <div class="col-xs-4">
-            <a href="https://play.google.com/store/apps/details?id=com.WinItInMinute.ufdfd" target="_blank"><i class="fa fa-android" aria-hidden="true"></i></a>
+            <a href="https://play.google.com/store/apps/details?id=com.WinItInMinute.ufdfd" target="_blank"><i class="fa fa-android" aria-hidden="true"></i>
+            <span>Download from <br>Play Store</span>
+            </a>
           </div>
           <div class="col-xs-4">
-            <a href="https://itunes.apple.com/us/app/win-it-in-minute/id1035566344?ls=1&mt=8" target="_blank"><i class="fa fa-apple" aria-hidden="true"></i></a>
+            <a href="https://itunes.apple.com/us/app/win-it-in-minute/id1035566344?ls=1&mt=8" target="_blank"><i class="fa fa-apple" aria-hidden="true"></i>
+            <span>Download from <br>App Store</span>
+            </a>
           </div>
       </div>
     </section>
@@ -124,7 +131,7 @@
     <section class="feedback" id="feedback">
       <div class="container">
         <h1 class="panelTitle">Feedback</h1>
-        <div class="row feedbackCard-wrap">
+        <!-- <div class="row feedbackCard-wrap">
           <div class="col-md-6 feedbackCard clearfix">
             <figure class="col-xs-3 fc-img"><img src="https://randomuser.me/api/portraits/men/56.jpg" alt="" /></figure>
             <div class="col-xs-9">
@@ -162,7 +169,48 @@
             </div>
           </div>
 
-        </div>
+        </div> -->
+        <ul class="feedback-wrap text-center" id="feedback-slide">
+          <li>
+            <div class="feedback-block">
+               Real Prizes... Best trivia Game This game is fun as well as educational.. Best thing is they are giving you real Prizes for quiz
+            </div>
+          </li>
+          <li>
+            <div class="feedback-block">
+               Amazing App to tickle your brain cells - go for it & The Best thing is we get real prizes ..!!!
+            </div>
+          </li>
+          <li>
+            <div class="feedback-block">
+            Good app for improving general knowledge.
+            </div>
+          </li>
+          <li>
+            <div class="feedback-block">
+              Excellent quiz game! True to it's name, it is a quick game of quiz, for all quiz lovers like me. Loving it.
+            </div>
+          </li>
+          <li>
+            <div class="feedback-block">
+              Awesome app The prizes are great! Addictive
+            </div>
+          </li>
+        </ul>
+        <!-- <div class="">
+          <div class="feedback-block">
+            Amazing App to tickle your brain cells - go for it & The Best thing is we get real prizes ..!!!
+          </div>
+          <div class="feedback-block">
+            Amazing App to tickle your brain cells - go for it & The Best thing is we get real prizes ..!!!
+          </div>
+          <div class="feedback-block">
+            Amazing App to tickle your brain cells - go for it & The Best thing is we get real prizes ..!!!
+          </div>
+          <div class="feedback-block">
+            Amazing App to tickle your brain cells - go for it & The Best thing is we get real prizes ..!!!
+          </div>
+        </div> -->
       </div>
     </section>
     <!-- feedback section ends -->
@@ -207,6 +255,15 @@
   <script type="text/javascript">
   var access_token;
       $(document).ready(function(){
+///////////feedback slide
+        // $('#feedback-slide').bxSlider({
+        //       mode: 'fade'
+        //       // auto: true
+        //     });
+            // setInterval(function() {
+            //   $('#feedback .bx-next').click();
+            // },1500);
+//////////feedback slide
         var $slider = $('#sliderhof');
         var result;
 
@@ -245,27 +302,15 @@ $.ajax({
         success: function(data) {
           result = data.result;
           var famedata = result.fameData;
-
           console.log(data);
           $.each(famedata, function(i, hofdata){
-            var userImage = hofdata.user_image;
-            var priceImg = hofdata.prize_image;
-            var userName = hofdata.user_name;
-            var countryName = hofdata.country;
-            var date = function(){
-                var dateString = hofdata.date;
-                var dateArr = dateString.split('T');
-                return dateArr[0];
-            };
-            var resDate = date();
-            var userImageMarkup = (userImage.indexOf("http") == 0) ? '<img src="'+ userImage +'">':'<img src="data:image/png;base64,'+ userImage +'">';
-
-            $slider.append('<div class="slide hof-slide text-center"><div class="slide-content"><figure>'+ userImageMarkup +'</figure><span class="priceImg"><img src="'+ priceImg +'" ></span><h4 class="name">'+ userName +'<br><span class="location">'+ countryName +'</span><br><span class="date">'+ resDate +'</span></h4></div>');
+            var hello = (hofdata.user_image.indexOf("http") == 0) ? '' : 'data:image/png;base64,';
+            $slider.append('<div class="slide hof-slide text-center"><div class="slide-content"><figure><img src="'+ hello+hofdata.user_image+'"></figure><span class="priceImg"><img src="'+hofdata.prize_image +'" ></span><h4 class="name">'+hofdata.user_name+'<br><span class="location">'+ hofdata.country +'</span><br><span class="date">'+ hofdata.date.split('T')[0] +'</span></h4></div>');
           });
 
           setTimeout(function(){
             hofslider();
-          },200);
+          },500);
           $('.loader').fadeOut(200);
         },
         error: function(e) {
@@ -275,7 +320,12 @@ $.ajax({
       });
     },2000);
 
-
+    //auto
+    setTimeout(function(){
+      setInterval(function(){
+        $('#hof .bx-next').click();
+      },2000);
+    },2000);
       });
 
   </script>

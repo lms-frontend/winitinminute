@@ -63,7 +63,7 @@ header.main-header{
   padding: 15px;
   padding-bottom: 0;
   .logo > img{
-    max-width: 100px;
+    max-width: 120px;
   }
   nav.main-navigation{
     // transition: all .5s;
@@ -114,9 +114,11 @@ section.banner{
     background-size: 42%;
     background-repeat: no-repeat;
     background-position: right bottom;
+    min-height: 350px;
     .b-heading{
       line-height: 1.2;
-      font-size: 2.5em;
+      font-size: 2em;
+      margin-top: 120px;
     }
     .b-subheading{
       color: $orange;
@@ -143,10 +145,30 @@ section.mobo-platform{
     max-width: 600px;
     padding: 25px 0;
   }
-  i.fa{
-    color: $light-gray;
-    font-size: 3em;
+  a{
+      text-decoration: none!important;
+    i.fa{
+      color: $header-bg;
+      font-size: 3em;
+    }
+    span{
+      font-weight: 600;
+      color: $header-bg;
+      font-size: 12px;
+      display: block;
+      margin-top: 10px;
+    }
+    &:hover{
+
+      i.fa{
+        color: $orange;
+      }
+      span{
+        color:  $orange;
+      }
+    }
   }
+
 }
 // mobo-platform section ends
 
@@ -310,7 +332,7 @@ section.hall-of-fame{
       }
       span.priceImg {
           position: absolute;
-          top: 50%;
+          top: 54%;
           max-width: 65px;
           left: 50%;
           width: 60px;
@@ -336,7 +358,7 @@ section.hall-of-fame{
         font-size: 1em;
         font-weight: 600;
         line-height: 1.4;
-        margin-top: 45px;
+        margin-top: 40px;
         color: $dark-heading-color;
         padding-bottom: 15px;
         span{
@@ -352,7 +374,42 @@ section.hall-of-fame{
 
 // feedback section starts
 section.feedback{
-    padding: 30px 0;
+  text-align: center;
+  padding: 30px 0;
+  ul.feedback-wrap{
+    min-height: 120px;
+    list-style-type: none;
+    position: relative;
+    padding: 0;
+    margin-top: 40px;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px 20px;
+    &:before{
+      content: "\f10d";
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      font: normal normal normal 3em/1 FontAwesome;
+      color: rgba($orange,0.1);
+      top: -20px;
+    }
+    &:after{
+      content: "\f10e";
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      font: normal normal normal 3em/1 FontAwesome;
+      color: rgba($orange,0.1);
+    }
+    .feedback-block{
+      font-size: 18px;
+
+      font-weight: 600;
+      color: $orange;
+    }
+  }
+  //for slider
   .feedbackCard-wrap{
 
   }
