@@ -15,28 +15,32 @@ $(document).ready(function(){
   feedbackSlider();
 });
 function hofslider() {
-  var viewport = $(window).width();
-  function slideno(){
-    if(viewport >= 1024){
-      return 4;
-    }
-    else if (viewport <= 1024 && viewport >= 768) {
-      return 3;
-    }
-    else if (viewport < 768 && viewport > 420) {
-      return 2;
-    }
-    else{
-      return 1;
-    }
-  }
- slider = $('.hof-slider').bxSlider({
-    slideWidth: 265,
-    minSlides: slideno(),
-    maxSlides: 4,
-    moveSlides: 1,
-    slideMargin: 20
-    });
+ //  var viewport = $(window).width();
+ //  function slideno(){
+ //    if(viewport >= 1024){
+ //      return 4;
+ //    }
+ //    else if (viewport <= 1024 && viewport >= 768) {
+ //      return 3;
+ //    }
+ //    else if (viewport < 768 && viewport > 420) {
+ //      return 2;
+ //    }
+ //    else{
+ //      return 1;
+ //    }
+ //  }
+ // slider = $('.hof-slider').bxSlider({
+ //    slideWidth: 265,
+ //    minSlides: slideno(),
+ //    maxSlides: 4,
+ //    moveSlides: 1,
+ //    slideMargin: 20
+ //    });
+  $('.hof-slider').owlCarousel({
+     autoPlay: 3000,
+     pagination: false
+  });
 
 
 }

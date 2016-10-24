@@ -328,11 +328,12 @@ section.hall-of-fame{
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
+          left: 0;
         }
       }
       span.priceImg {
           position: absolute;
-          top: 54%;
+          top: 50%;
           max-width: 65px;
           left: 50%;
           width: 60px;
@@ -348,8 +349,10 @@ section.hall-of-fame{
           }
           img{
             position: absolute;
-            top: 50%;
             transform: translateY(-50%);
+            top: 50%;
+            left:0;
+            width: 100%;
           }
       }
 

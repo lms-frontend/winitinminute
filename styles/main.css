@@ -2676,60 +2676,6 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 @media print { .hidden-print { display: none !important; } }
 
-.bx-wrapper { position: relative; margin: 0 auto 60px; padding: 0; padding: 0 50px; }
-
-.bx-wrapper img { max-width: 100%; display: block; }
-
-.bx-wrapper .bx-viewport { -webkit-transform: translatez(0); -ms-transform: translatez(0); transform: translatez(0); }
-
-.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto { position: absolute; bottom: -30px; width: 100%; }
-
-/* LOADER */
-.bx-wrapper .bx-loading { min-height: 50px; background: url(../images/bx_loader.gif) center center no-repeat #fff; height: 100%; width: 100%; position: absolute; top: 0; left: 0; z-index: 2000; display: none; }
-
-/* PAGER */
-.bx-wrapper .bx-pager { text-align: center; font-size: .85em; font-family: Arial; font-weight: bold; color: #666; padding-top: 20px; display: none; }
-
-.bx-wrapper .bx-pager .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item { display: inline-block; zoom: 1; display: inline; }
-
-.bx-wrapper .bx-pager.bx-default-pager a { background: #666; text-indent: -9999px; display: block; width: 10px; height: 10px; margin: 0 5px; outline: 0; border-radius: 5px; }
-
-.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active { background: #000; }
-
-/* DIRECTION CONTROLS (NEXT / PREV) */
-.bx-wrapper .bx-prev { left: 10px; background: url(../images/controls.png) no-repeat 0 -32px; }
-
-.bx-wrapper .bx-next { right: 10px; background: url(../images/controls.png) no-repeat -43px -32px; }
-
-.bx-wrapper .bx-prev:hover { background-position: 0 0; }
-
-.bx-wrapper .bx-next:hover { background-position: -43px 0; }
-
-.bx-wrapper .bx-controls-direction a { position: absolute; top: 50%; margin-top: -16px; outline: 0; width: 32px; height: 32px; text-indent: -9999px; z-index: 9999; }
-
-.bx-wrapper .bx-controls-direction a.disabled { display: none; }
-
-/* AUTO CONTROLS (START / STOP) */
-.bx-wrapper .bx-controls-auto { text-align: center; }
-
-.bx-wrapper .bx-controls-auto .bx-start { display: block; text-indent: -9999px; width: 10px; height: 11px; outline: 0; background: url(../images/controls.png) -86px -11px no-repeat; margin: 0 3px; }
-
-.bx-wrapper .bx-controls-auto .bx-start:hover, .bx-wrapper .bx-controls-auto .bx-start.active { background-position: -86px 0; }
-
-.bx-wrapper .bx-controls-auto .bx-stop { display: block; text-indent: -9999px; width: 9px; height: 11px; outline: 0; background: url(../images/controls.png) -86px -44px no-repeat; margin: 0 3px; }
-
-.bx-wrapper .bx-controls-auto .bx-stop:hover, .bx-wrapper .bx-controls-auto .bx-stop.active { background-position: -86px -33px; }
-
-/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
-.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager { text-align: left; width: 80%; }
-
-.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto { right: 0; width: 35px; }
-
-/* IMAGE CAPTIONS */
-.bx-wrapper .bx-caption { position: absolute; bottom: 0; left: 0; background: #666\9; background: rgba(80, 80, 80, 0.75); width: 100%; }
-
-.bx-wrapper .bx-caption span { color: #fff; font-family: Arial; display: block; font-size: .85em; padding: 10px; }
-
 /*! animate.css -http://daneden.me/animate Version - 3.5.1 Licensed under the MIT license - http://opensource.org/licenses/MIT Copyright (c) 2016 Daniel Eden */
 .animated { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
 
@@ -4409,13 +4355,13 @@ section.hall-of-fame .hof-slide figure { display: inline-block; position: relati
 
 @media screen and (max-width: 600px) { section.hall-of-fame .hof-slide figure { width: 150px; height: 150px; } }
 
-section.hall-of-fame .hof-slide figure img { width: 100%; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
+section.hall-of-fame .hof-slide figure img { width: 100%; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); left: 0; }
 
-section.hall-of-fame .hof-slide span.priceImg { position: absolute; top: 54%; max-width: 65px; left: 50%; width: 60px; height: 60px; background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 0 0 2px rgba(223, 74, 61, 0.9); -webkit-transform: rotate(-15deg); -ms-transform: rotate(-15deg); transform: rotate(-15deg); }
+section.hall-of-fame .hof-slide span.priceImg { position: absolute; top: 50%; max-width: 65px; left: 50%; width: 60px; height: 60px; background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 0 0 2px rgba(223, 74, 61, 0.9); -webkit-transform: rotate(-15deg); -ms-transform: rotate(-15deg); transform: rotate(-15deg); }
 
 @media screen and (max-width: 600px) { section.hall-of-fame .hof-slide span.priceImg { width: 50px; height: 50px; } }
 
-section.hall-of-fame .hof-slide span.priceImg img { position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
+section.hall-of-fame .hof-slide span.priceImg img { position: absolute; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); top: 50%; left: 0; width: 100%; }
 
 section.hall-of-fame .hof-slide h4.name { text-transform: uppercase; font-size: 1em; font-weight: 600; line-height: 1.4; margin-top: 40px; color: #3e3e3e; padding-bottom: 15px; }
 
