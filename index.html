@@ -131,6 +131,11 @@
 
     <!-- feedback section starts -->
     <section class="feedback" id="feedback">
+      <div class="loader">
+        <div class="loader-content">
+          <div id="loading"></div>
+        </div>
+      </div>
       <div class="container">
         <h1 class="panelTitle">Feedback</h1>
         <!-- <div class="row feedbackCard-wrap">
@@ -314,10 +319,11 @@ $.ajax({
           setTimeout(function(){
             hofslider();
           },500);
-          $('.loader').fadeOut(200);
+          $('.hall-of-fame .loader').fadeOut(200);
         },
         error: function(e) {
             console.log(e.responseText);
+            alert('Sorry ! There is some issue loading hall of fame winners. Please Reload the page or try later');
             // hofslider();
          }
       });

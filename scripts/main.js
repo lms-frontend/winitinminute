@@ -117,6 +117,10 @@ function feedbackSlider() {
   itemAmt = items.length;
   function cycleItems() {
     items.fadeOut(500);
+    $('.feedback .loader').fadeOut();
+    setTimeout(function(){
+      $('.feedback').addClass('loaded');
+    },500);
     var item = $('.feedback-wrap li').eq(currentIndex);
     setTimeout(function(){item.fadeIn(500);},500)
   }
@@ -127,4 +131,6 @@ function feedbackSlider() {
     currentIndex = 0;
   }
  }, 3000);
+
+
 }
