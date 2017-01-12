@@ -4269,7 +4269,7 @@ h1.panelTitle { text-transform: uppercase; }
 
 header.main-header { background: #2d2e42 url(../images/bg-artboard.jpg) no-repeat center center; background-size: cover; color: #fff; padding: 15px; padding-bottom: 0; }
 
-header.main-header .logo > img { max-width: 120px; }
+header.main-header .logo > img { max-width: 75px; }
 
 header.main-header nav.main-navigation { min-height: 120px; }
 
@@ -4289,11 +4289,15 @@ header.main-header nav.main-navigation ul.main-nav > li > a.active { color: #df4
 
 section.banner { margin-top: 35px; }
 
-section.banner .banner-content { background: url(../images/banner-wininminute.png); background-size: 42%; background-repeat: no-repeat; background-position: right bottom; min-height: 350px; }
+section.banner .banner-content { background: url(../images/banner-wininminute.png); background-size: 42%; background-repeat: no-repeat; background-position: right bottom; min-height: 350px; position: relative; }
 
-section.banner .banner-content .b-heading { line-height: 1.2; font-size: 2em; margin-top: 120px; }
+section.banner .banner-content .logo { text-align: center; margin-top: 15px; }
 
-section.banner .banner-content .b-subheading { color: #df4a3d; font-size: 1.2em; text-transform: uppercase; letter-spacing: .2px; margin-top: 25px; }
+section.banner .banner-content .logo img { width: 100%; max-width: 200px; }
+
+section.banner .banner-content .b-heading { line-height: 1.5; font-size: 3em; margin-top: 120px; }
+
+section.banner .banner-content .b-subheading { color: #df4a3d; font-size: 1.8em; text-transform: uppercase; letter-spacing: .2px; line-height: 1.5; margin-top: -5px; }
 
 section.banner .banner-content p { margin-top: 25px; max-width: 255px; }
 
@@ -4313,13 +4317,15 @@ section.mobo-platform a:hover span { color: #df4a3d; }
 
 section.welcome { padding: 40px 0; }
 
-section.welcome h1.welcomeHeading { color: #df4a3d; font-size: 3em; text-transform: uppercase; line-height: 1.2; }
+section.welcome h1.welcomeHeading { color: #df4a3d; font-size: 2.5em; text-transform: uppercase; line-height: 1.2; }
 
 section.welcome h1.welcomeHeading span { color: #3e3e3e; font-size: .85em; }
 
 section.welcome .welcomeContent h3 { font-size: 1.2em; text-transform: uppercase; color: #df4a3d; margin-bottom: 20px; line-height: 1.5; }
 
 section.welcome .welcomeContent p { color: #8b8b8b; font-size: .95em; }
+
+.platform-Logo img { max-width: 100%; }
 
 section.hall-of-fame { position: relative; background: #f5f5f5; padding: 20px 10px; color: #3e3e3e; }
 
@@ -4379,7 +4385,7 @@ section.feedback .loader .loader-content { position: absolute; top: 50%; left: 5
 
 section.feedback .loader .loader-content #loading { width: 40px; height: 40px; border-bottom: 4px solid #df4a3d; border-left: 4px solid #df4a3d; }
 
-section.feedback ul.feedback-wrap { min-height: 120px; list-style-type: none; position: relative; padding: 0; margin-top: 40px; max-width: 650px; margin: 30px auto; padding: 30px 20px; }
+section.feedback ul.feedback-wrap { min-height: 120px; list-style-type: none; position: relative; padding: 0; margin-top: 40px; max-width: 650px; margin: 10px auto; padding: 15px 20px; }
 
 section.feedback ul.feedback-wrap:before { content: "\f10d"; position: absolute; left: 0; display: inline-block; font: normal normal normal 3em/1 FontAwesome; color: rgba(223, 74, 61, 0.1); top: -20px; }
 
@@ -4440,6 +4446,8 @@ footer.main-footer .social-media .smi { background: rgba(255, 255, 255, 0.1); di
   header.main-header .navbar-toggle { top: 20px; }
   section.banner .banner-content { background: none; }
   section.banner .banner-content p { margin: 25px auto 0; }
+  section.banner .banner-content .logo { margin-top: 80px; }
+  section.banner .banner-content .logo img { max-width: 150px; }
   nav.main-navigation { margin-bottom: 0; background: #33344b; box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.22); }
   nav.main-navigation .navbar-toggle span { background: #fff; }
   nav.main-navigation .navbar-collapse { box-shadow: none; }

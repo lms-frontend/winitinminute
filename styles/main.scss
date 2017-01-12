@@ -63,7 +63,7 @@ header.main-header{
   padding: 15px;
   padding-bottom: 0;
   .logo > img{
-    max-width: 120px;
+    max-width: 75px;
   }
   nav.main-navigation{
     // transition: all .5s;
@@ -87,6 +87,16 @@ header.main-header{
     }
   }
 }
+//latest correction ---------------------------------------------------------------
+// body:not(.stickyHeader) .logo{
+  // margin-top: 500px;
+//   position: absolute;
+//   top: 150px;
+//   img{
+//     max-width: 210px;
+//   }
+// }
+//latest correction ---------------------------------------------------------------
 
 //stickyHeader
 .stickyHeader nav.main-navigation{
@@ -115,17 +125,30 @@ section.banner{
     background-repeat: no-repeat;
     background-position: right bottom;
     min-height: 350px;
+    position: relative;
+    .logo{
+      // position: absolute;
+      // background: red;
+      text-align: center;
+      margin-top: 15px;
+      img{
+        width: 100%;
+        max-width: 200px;
+      }
+    }
     .b-heading{
-      line-height: 1.2;
-      font-size: 2em;
+      line-height: 1.5;
+      font-size: 3em;
       margin-top: 120px;
     }
     .b-subheading{
       color: $orange;
-      font-size: 1.2em;
+      font-size: 1.8em;
       text-transform: uppercase;
       letter-spacing: .2px;
-      margin-top: 25px;
+      // margin-top: 100px;
+      line-height: 1.5;
+      margin-top: -5px;
     }
     & p{
       margin-top: 25px;
@@ -177,7 +200,7 @@ section.mobo-platform{
     padding: 40px 0;
     h1.welcomeHeading{
       color: $orange;
-      font-size: 3em;
+      font-size: 2.5em;
       text-transform: uppercase;
       line-height: 1.2;
       span{
@@ -200,6 +223,12 @@ section.mobo-platform{
     }
   }
 // welcome section ends
+
+.platform-Logo{
+  img{
+    max-width: 100%;
+  }
+}
 
 // hall of fame starts
 section.hall-of-fame{
@@ -417,8 +446,8 @@ section.feedback{
     padding: 0;
     margin-top: 40px;
     max-width: 650px;
-    margin: 30px auto;
-    padding: 30px 20px;
+    margin: 10px auto;
+    padding: 15px 20px;
     &:before{
       content: "\f10d";
       position: absolute;

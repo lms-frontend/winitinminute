@@ -334,13 +334,10 @@ $.ajax({
           var famedata = result.fameData;
           console.log(data);
           $.each(famedata, function(i, hofdata){
-              //alert(i);
-              if(i>19) return false;
             var hello = (hofdata.user_image.indexOf("http") == 0) ? '' : 'data:image/png;base64,';
-            
             $slider.append('<div class="slide hof-slide text-center"><div class="slide-content"><figure><img src="'+ hello+hofdata.user_image+'"></figure><span class="priceImg"><img src="'+hofdata.prize_image +'" ></span><h4 class="name">'+hofdata.user_name+'<br><span class="location">'+ hofdata.country +'</span><br><span class="date">'+ hofdata.date.split('T')[0] +'</span></h4></div>');
           });
-         
+
           setTimeout(function(){
             hofslider();
           },500);
